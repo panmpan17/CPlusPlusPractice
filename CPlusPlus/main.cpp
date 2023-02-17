@@ -10,42 +10,96 @@
 #include "sorting.hpp"
 #define print(message) std::cout << message << "\n";
 #define print_array(array, size) for(int i=0; i<size; i++) std::cout << array[i] << ", "; std::cout << "\n";
+#define copy_array(fromArray, toArray, size) for(int i=0; i<size; i++) toArray[i]=fromArray[i];
 #define add(a, b) a + b;
 
 // Declare
 struct TestData;
 void process_data(TestData* data);
 int main(int argc, const char * argv[]);
+void fill_array_with_random_value(int* array, int size, int min, int max);
+int random_int(int min, int max);
+bool check_sorting_result(int* array, int size);
+void test_sorting();
+void test_struct();
 
 
 // Actual implementation
-struct TestData {
+struct TestData
+{
     int DataA;
     int DataB;
     int Result;
 };
 
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    TestData data;
-    data.DataA = 10;
-    data.DataB = 3;
-    process_data(&data);
-
-//    print(data.Result);
-
-    int array[9] = {104, 1, 3, 2, 9, 40, 129, 15, 10};
-//    int array2[9] = { 3, 7, 8, 5, 2, 1, 9, 5, 4 };
-//    bubble_sort(array, 9);
-//    insert_sort(array, 9);
-//    selection_sort(array, 9);
-    quick_sort(array, 9);
-    print_array(array, 9);
+int main(int argc, const char * argv[])
+{
+    test_sorting();
 
     return 0;
 }
 
-void process_data(TestData* data) {
+void test_structure()
+{
+    TestData data;
+    data.DataA = 10;
+    data.DataB = 3;
+    process_data(&data);
+    print(data.Result);
+}
+
+void test_sorting()
+{
+    const int arraySize = 30;
+
+    int dataArray[arraySize];
+    fill_array_with_random_value(dataArray, arraySize, 0, 1001);
+
+    int array[arraySize];
+
+    copy_array(dataArray, array, arraySize);
+    bubble_sort(array, arraySize);
+    print("Bubble Sort: " << check_sorting_result(array, arraySize));
+
+    copy_array(dataArray, array, arraySize);
+    insert_sort(array, arraySize);
+    print("Insert Sort: " << check_sorting_result(array, arraySize));
+    
+    copy_array(dataArray, array, arraySize);
+    selection_sort(array, arraySize);
+    print("Selection Sort: " << check_sorting_result(array, arraySize));
+
+    copy_array(dataArray, array, arraySize);
+    quick_sort(array, arraySize);
+    print("Quick Sort: " << check_sorting_result(array, arraySize));
+    
+    
+    copy_array(dataArray, array, arraySize);
+    heap_sort(array, arraySize);
+    print("Heap Sort: " << check_sorting_result(array, arraySize));
+}
+
+void process_data(TestData* data)
+{
     data->Result = sqaure(data->DataA, data->DataB);
+}
+
+void fill_array_with_random_value(int* array, int size, int min, int max)
+{
+    for (int i = 0; i < size; i++)
+        array[i] = random_int(min, max);
+}
+
+int random_int(int min, int max) { return rand() % (max - min) + min; }
+
+bool check_sorting_result(int* array, int size)
+{
+    int last = array[0];
+    for (int i = 1; i < size; i++)
+    {
+        if (last > array[i])
+            return false;
+    }
+    return true;
 }
