@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C66F00729A474A000B1A34E /* class_struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C66F00529A474A000B1A34E /* class_struct.cpp */; };
 		4C97CD59299E60010079814B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97CD58299E60010079814B /* main.cpp */; };
 		4C97CD61299E64DE0079814B /* mathlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97CD5F299E64DE0079814B /* mathlib.cpp */; };
 		4C97CD64299E68B50079814B /* sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97CD62299E68B50079814B /* sorting.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C66F00529A474A000B1A34E /* class_struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = class_struct.cpp; sourceTree = "<group>"; };
+		4C66F00629A474A000B1A34E /* class_struct.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = class_struct.hpp; sourceTree = "<group>"; };
 		4C97CD55299E60010079814B /* CPlusPlus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPlusPlus; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97CD58299E60010079814B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4C97CD5F299E64DE0079814B /* mathlib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mathlib.cpp; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		4C97CD57299E60010079814B /* CPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				4C66F00529A474A000B1A34E /* class_struct.cpp */,
+				4C66F00629A474A000B1A34E /* class_struct.hpp */,
 				4C97CD58299E60010079814B /* main.cpp */,
 				4C97CD5F299E64DE0079814B /* mathlib.cpp */,
 				4C97CD60299E64DE0079814B /* mathlib.hpp */,
@@ -132,6 +137,7 @@
 				4C97CD64299E68B50079814B /* sorting.cpp in Sources */,
 				4C97CD59299E60010079814B /* main.cpp in Sources */,
 				4C97CD61299E64DE0079814B /* mathlib.cpp in Sources */,
+				4C66F00729A474A000B1A34E /* class_struct.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

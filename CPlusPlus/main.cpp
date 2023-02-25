@@ -8,6 +8,7 @@
 #include <iostream>
 #include "mathlib.hpp"
 #include "sorting.hpp"
+#include "class_struct.hpp"
 #define print(message) std::cout << message << "\n";
 #define print_array(array, size) for(int i=0; i<size; i++) std::cout << array[i] << ", "; std::cout << "\n";
 #define copy_array(fromArray, toArray, size) for(int i=0; i<size; i++) toArray[i]=fromArray[i];
@@ -35,7 +36,8 @@ struct TestData
 
 int main(int argc, const char * argv[])
 {
-    test_sorting();
+//    test_sorting();
+    test();
 
     return 0;
 }
