@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D27664D2C392E5300DB324D /* hangman_game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D27664B2C392E5300DB324D /* hangman_game.cpp */; };
+		1D2766502C392F8C00DB324D /* random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D27664E2C392F8C00DB324D /* random.cpp */; };
 		4C66F00729A474A000B1A34E /* class_struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C66F00529A474A000B1A34E /* class_struct.cpp */; };
 		4C97CD59299E60010079814B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97CD58299E60010079814B /* main.cpp */; };
 		4C97CD61299E64DE0079814B /* mathlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C97CD5F299E64DE0079814B /* mathlib.cpp */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D27664B2C392E5300DB324D /* hangman_game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hangman_game.cpp; sourceTree = "<group>"; };
+		1D27664C2C392E5300DB324D /* hangman_game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hangman_game.hpp; sourceTree = "<group>"; };
+		1D27664E2C392F8C00DB324D /* random.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = random.cpp; sourceTree = "<group>"; };
+		1D27664F2C392F8C00DB324D /* random.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = random.hpp; sourceTree = "<group>"; };
 		4C66F00529A474A000B1A34E /* class_struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = class_struct.cpp; sourceTree = "<group>"; };
 		4C66F00629A474A000B1A34E /* class_struct.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = class_struct.hpp; sourceTree = "<group>"; };
 		4C97CD55299E60010079814B /* CPlusPlus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPlusPlus; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +79,10 @@
 				4C97CD60299E64DE0079814B /* mathlib.hpp */,
 				4C97CD62299E68B50079814B /* sorting.cpp */,
 				4C97CD63299E68B50079814B /* sorting.hpp */,
+				1D27664B2C392E5300DB324D /* hangman_game.cpp */,
+				1D27664C2C392E5300DB324D /* hangman_game.hpp */,
+				1D27664E2C392F8C00DB324D /* random.cpp */,
+				1D27664F2C392F8C00DB324D /* random.hpp */,
 			);
 			path = CPlusPlus;
 			sourceTree = "<group>";
@@ -134,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D27664D2C392E5300DB324D /* hangman_game.cpp in Sources */,
 				4C97CD64299E68B50079814B /* sorting.cpp in Sources */,
+				1D2766502C392F8C00DB324D /* random.cpp in Sources */,
 				4C97CD59299E60010079814B /* main.cpp in Sources */,
 				4C97CD61299E64DE0079814B /* mathlib.cpp in Sources */,
 				4C66F00729A474A000B1A34E /* class_struct.cpp in Sources */,

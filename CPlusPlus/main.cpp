@@ -9,6 +9,9 @@
 #include "mathlib.hpp"
 #include "sorting.hpp"
 #include "class_struct.hpp"
+#include "hangman_game.hpp"
+#include "random.hpp"
+
 #define print(message) std::cout << message << "\n";
 #define print_array(array, size) for(int i=0; i<size; i++) std::cout << array[i] << ", "; std::cout << "\n";
 #define copy_array(fromArray, toArray, size) for(int i=0; i<size; i++) toArray[i]=fromArray[i];
@@ -19,7 +22,6 @@ struct TestData;
 void process_data(TestData* data);
 int main(int argc, const char * argv[]);
 void fill_array_with_random_value(int* array, int size, int min, int max);
-int random_int(int min, int max);
 bool check_sorting_result(int* array, int size);
 void test_sorting();
 void test_struct();
@@ -37,7 +39,9 @@ struct TestData
 int main(int argc, const char * argv[])
 {
 //    test_sorting();
-    test();
+//    test();
+    srand(static_cast<unsigned int>(time(nullptr)));
+    hangman_game();
 
     return 0;
 }
@@ -92,8 +96,6 @@ void fill_array_with_random_value(int* array, int size, int min, int max)
     for (int i = 0; i < size; i++)
         array[i] = random_int(min, max);
 }
-
-int random_int(int min, int max) { return rand() % (max - min) + min; }
 
 bool check_sorting_result(int* array, int size)
 {
